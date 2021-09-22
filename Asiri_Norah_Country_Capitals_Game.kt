@@ -28,11 +28,11 @@ fun games ( CountryCapital : List<Countries>)
     var score = 0
     var capital = ""
     for (i in 0..2) {
-        var country=CountryCapital[Random.nextInt(1, 10)-i] /* -->
+        var country=CountryCapital[Random.nextInt(1, 11)-i] /* -->
          for get always ask 3 unique questions:
-          the range start from 1 until 10
-         then subtract i from the random number
-         (to keep index in range must be start from 1 if the random 1 then subtract 1 the final index will be 0 )
+          the range start from 1 until 11 (the end of random is 10 , 10 -1 =9 is last index in list)
+         in every loop must be subtracted i from the random number
+         (to keep index in range must be start from 1 if the random is 1 then subtract 1 the final index will be 0 )
          */
         println("What is capital city of ${country.name}? >>")
         capital = readLine()!!.lowercase()
